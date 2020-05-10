@@ -5,48 +5,48 @@ const sr = ScrollReveal();
 sr.reveal('.homeHeader', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.homeCaption', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.homeLogo', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.homeBtn', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
@@ -57,36 +57,36 @@ sr.reveal('.homeBtn', {
 sr.reveal('.aboutHeader', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.aboutCaption', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.aboutBtn', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
@@ -97,24 +97,24 @@ sr.reveal('.aboutBtn', {
 sr.reveal('.servicesCaption', {
     origin: 'bottom',
     distance: '30px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.services-item', {
     origin: 'bottom',
     distance: '30px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
@@ -125,36 +125,36 @@ sr.reveal('.services-item', {
 sr.reveal('.whyUsHeader', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.whyUsText', {
     origin: 'bottom',
     distance: '50px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.whyUsItems', {
     origin: 'bottom',
     distance: '30px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
@@ -165,24 +165,36 @@ sr.reveal('.whyUsItems', {
 sr.reveal('.processBriefing', {
     origin: 'bottom',
     distance: '30px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.companies', {
     origin: 'bottom',
     distance: '30px',
-    duration: 700,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
+    viewFactor: 0.0
+});
+
+sr.reveal('.processImages', {
+    origin: 'bottom',
+    distance: '30px',
+    duration: 1000,
+    reset: true,
+    mobile: true,
+    desktop: true,
+    useDelay: 'always',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
@@ -193,36 +205,36 @@ sr.reveal('.companies', {
 sr.reveal('.contactHeader', {
     origin: 'bottom',
     distance: '30px',
-    duration: 200,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
 sr.reveal('.contactText', {
     origin: 'bottom',
     distance: '30px',
-    duration: 200,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
-sr.reveal('.contactContents', {
+sr.reveal('.contactInfo', {
     origin: 'bottom',
     distance: '30px',
-    duration: 200,
+    duration: 1000,
     reset: true,
     mobile: true,
     desktop: true,
     useDelay: 'always',
-    easing: 'ease-in',
+    easing: 'ease-in-out',
     viewFactor: 0.0
 });
 
