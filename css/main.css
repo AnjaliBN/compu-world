@@ -403,33 +403,33 @@ body {
   margin-top: -50px;
 }
 
-.wtitle a, .wtitle a:hover {
+.wtitle p, .wtitle p:hover {
   color: #fff !important;
   font-size: 2em;
 }
 
 @media screen and (max-width: 320px) {
-  .wtitle a {
+  .wtitle p {
     font-size: 1.4em;
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 575px) {
-  .wtitle a {
+  .wtitle p {
     font-size: 1.6em;
     line-height: 40px;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  .wtitle a {
+  .wtitle p {
     font-size: 1.6em;
     line-height: 40px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .wtitle a {
+  .wtitle p {
     font-size: 1.6em;
     line-height: 40px;
   }
@@ -609,40 +609,40 @@ body {
   margin-top: -40px;
 }
 
-.team a, .team a:hover {
+.team p, .team p:hover {
   color: #fff !important;
   font-size: 2.5em;
   font-weight: bold;
 }
 
 @media screen and (max-width: 320px) {
-  .team a {
+  .team p {
     font-size: 1.4em;
   }
-  .team a span {
+  .team p span {
     display: block;
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 575px) {
-  .team a {
+  .team p {
     font-size: 1.7em;
     line-height: 40px;
   }
-  .team a span {
+  .team p span {
     display: block;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  .team a {
+  .team p {
     font-size: 1.7em;
     line-height: 40px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .team a {
+  .team p {
     font-size: 1.8em;
     line-height: 40px;
   }
