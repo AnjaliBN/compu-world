@@ -2,12 +2,13 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-y: scroll;
+  scroll-padding-top: 110px;
 }
 
 body {
   font-family: 'Roboto Slab', serif;
   position: relative;
+  padding-top: 115px;
 }
 
 /* Styling for the whole body */
@@ -15,20 +16,15 @@ body {
 /* Navbar */
 
 .navbar {
-  position: sticky;
-  position: -webkit-sticky;
   top: 0;
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 5px;
-  -webkit-box-shadow: 0px 8px 5px -3px rgba(39, 154, 210, 0.81);
-  -moz-box-shadow:    0px 8px 5px -3px rgba(39, 154, 210, 0.81);
-  -ms-box-shadow:     0px 8px 5px -3px rgba(39, 154, 210, 0.81);
-  -o-box-shadow:      0px 8px 5px -3px rgba(39, 154, 210, 0.81);
-  box-shadow:         0px 8px 5px -3px rgba(39, 154, 210, 0.81);
+  border-bottom: 5px solid rgba(39, 154, 210, 0.9);
 }
 
-.navbar-collapse, .navbar {
+.navbar-collapse, .nav-link, .nav-item, .dropdown-menu, .dropdown-item,
+.dropdown-submenu, .navbar, .img-responsive {
   z-index: 10;
 }
 
@@ -50,9 +46,8 @@ body {
   color: #279AD2;
   font-weight: bold;
   letter-spacing: 0.5px;
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-family: 'Roboto Slab', serif;
-  padding: 1em;
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -66,17 +61,16 @@ body {
   background-color: #279AD2;
   color: #fff;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-.dropdown-item:hover {
-  color: #279AD2;
+.dropdown-item:hover, .dropdown-item:active, .dropdown-item.active {
+  color: #ffffff;
+  background-color: #279AD2;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
-  .img-responsive {
-    width: 100px;
-    height: auto;
-  }
   .logoDiv {
     margin-left: auto;
     margin-right: auto;
@@ -99,6 +93,11 @@ body {
   .navbar-collapse, .dropdown-menu {
     text-align: center;
   }
+  .navbar-collapse {
+    height: auto;
+    max-height: 170px;
+    overflow-x: hidden;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -110,6 +109,36 @@ body {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .dropdown-item {
+    font-size: 0.66em;
+  }
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+  
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 150px;
+  overflow-x: hidden;
+}
+
 /* Navbar */
 
 /* Carousel */
@@ -119,8 +148,12 @@ body {
   padding-bottom: auto;
 }
 
-.indicator {
+.carousel-indicators, .indicator, .carousel-control-prev, .carousel-control-next {
   z-index: 5;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  cursor: pointer;
 }
 
 #carousel, .carousel-inner, .carousel-item {
@@ -131,6 +164,7 @@ body {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  transition: transform 2s ease-out;
 }
 
 .black-overlay {
@@ -139,7 +173,7 @@ body {
   left: 0px;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .carouselPics {
@@ -155,16 +189,19 @@ body {
 .carousel-caption {
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   bottom: initial;
 }
 
 .sub-caption {
-  line-height: 22px;
+  margin-top: 1.3em;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 320px) {
-  #carousel, .carousel-inner, .carousel-item {
-    height: 170px;
+  #carousel, .carousel-inner, .carousel-item, .carouselPics {
+    height: 270px;
   }
   .main-caption {
     font-size: 1em;
@@ -175,20 +212,20 @@ body {
 }
 
 @media screen and (min-width: 321px) and (max-width: 575px) {
-  #carousel, .carousel-inner, .carousel-item {
-    height: 195px;
+  #carousel, .carousel-inner, .carousel-item, .carouselPics {
+    height: 360px;
   }
   .main-caption {
-    font-size: 1em;
+    font-size: 1.15em;
   }
   .sub-caption {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  #carousel, .carousel-inner, .carousel-item {
-    height: 270px;
+  #carousel, .carousel-inner, .carousel-item, .carouselPics {
+    height: 330px;
   }
   .main-caption {
     font-size: 1.1em;
@@ -199,8 +236,8 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  #carousel, .carousel-inner, .carousel-item {
-    height: 320px;
+  #carousel, .carousel-inner, .carousel-item, .carouselPics {
+    height: 400px;
   }
   .main-caption {
     font-size: 1.5em;
@@ -212,10 +249,19 @@ body {
 
 @media screen and (min-width: 992px) {
   .main-caption {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   .sub-caption {
-    font-size: 1.3em;
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-caption {
+    font-size: 2.3em;
+  }
+  .sub-caption {
+    font-size: 1.1em;
   }
 }
 
@@ -225,6 +271,7 @@ body {
 
 #about {
   z-index: 4;
+  padding: 2.4em;
 }
 
 .aboutHeader {
@@ -239,6 +286,7 @@ body {
 
 .aboutMainCaption {
   font-weight: bold;
+  font-size: 1.6em;
 }
 
 @media screen and (max-width: 320px) {
@@ -298,6 +346,12 @@ body {
   }
 }
 
+@media screen and (max-width: 991px) {
+  #about {
+    padding: 1.5em;
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .mt-5 {
     margin-top: 2.5em !important;
@@ -319,6 +373,69 @@ body {
     line-height: 40px;
   }
 }
+
+/* Computers - Parallax */
+
+#plx {
+  background: url('../images/Computer.jpg');
+  height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.plxOverlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.wtitle {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  margin-top: -50px;
+}
+
+.wtitle a, .wtitle a:hover {
+  color: #fff !important;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 320px) {
+  .wtitle a {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 575px) {
+  .wtitle a {
+    font-size: 1.6em;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .wtitle a {
+    font-size: 1.6em;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .wtitle a {
+    font-size: 1.6em;
+    line-height: 40px;
+  }
+}
+
+/* Computers - Parallax */
 
 /* About Services */
 
@@ -359,7 +476,7 @@ body {
   margin-right: 8px;
 }
 
-.servicesBtn {
+.servicesBtn, .servicesBtn:link, .servicesBtn:visited {
   padding: 1em;
   background-color: #279AD2;
   border: 3px solid #279AD2;
@@ -367,10 +484,11 @@ body {
   cursor: pointer;
 }
 
-.servicesBtn:hover {
+.servicesBtn:hover, .servicesBtn:active {
   background-color: #fff;
   border: 3px solid #279AD2;
   color: #279AD2;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 320px) {
@@ -387,6 +505,9 @@ body {
 }
 
 @media screen and (min-width: 321px) and (max-width: 575px) {
+  .services-heading {
+    font-size: 1.05em;
+  }
   .serviceFeatures li {
     font-size: 0.9em;
   }
@@ -466,3 +587,529 @@ body {
 /* About Services */
 
 /* About */
+
+/* Our Team - Why choose us */
+
+/* Team CompuWorld - Parallax */
+
+#teamPlx {
+  background: url('../images/Team.png');
+  height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  margin-top: -40px;
+}
+
+.team a, .team a:hover {
+  color: #fff !important;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 320px) {
+  .team a {
+    font-size: 1.4em;
+  }
+  .team a span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 575px) {
+  .team a {
+    font-size: 1.7em;
+    line-height: 40px;
+  }
+  .team a span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .team a {
+    font-size: 1.7em;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .team a {
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+}
+
+/* Team CompuWorld - Parallax */
+
+.whyUsDiv {
+  color: #fff;
+  background: url('../images/BlackBG.jpg');
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.whyUsSection {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
+.whyUsText {
+  line-height: 30px;
+  word-spacing: 1.5px;
+  text-align: justify;
+}
+
+.whyUsText, .reasons {
+  font-size: 0.9em;
+}
+
+.whyUsReasons {
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .whyUsReasons {
+    margin-top: 1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .whyUsText {
+    width: 90%;
+  }
+}
+
+/* Our Team - Why choose us */
+
+/* Our Process */
+
+.processSectionWrapper {
+  background: #ffffff;
+}
+
+.process {
+  width: 100%;
+  height: auto;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+}
+
+.process #processInner {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.processBriefing {
+  padding: 10px 15px;
+  border-radius: 1.5em;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2em;
+}
+
+.processContent ul {
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+.processContent ul li {
+  list-style-type: none;
+  text-indent: -1.1em;
+}
+
+.process .processHeader {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.processText {
+  font-size: 13px;
+  line-height: 30px;
+  word-spacing: 1.5px;
+  justify-content: space-evenly;
+}
+
+.fa-star {
+  margin-right: 10px;
+  color: #3e8914;
+}
+
+.companies {
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 1.5em;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1.5em;
+}
+
+.processBriefing, .companies {
+  -webkit-box-shadow: 0px 10px 28px -10px rgba(150,150,150,1);
+  -moz-box-shadow: 0px 10px 28px -10px rgba(150,150,150,1);
+  box-shadow: 0px 10px 28px -10px rgba(150,150,150,1);
+}
+
+.companiesFirstRow, .companiesSecondRow {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.companiesFirstRow div, .companiesSecondRow div {
+  padding-top: auto;
+  padding-bottom: auto;
+  padding-right: auto;
+  padding-left: auto;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.companiesFirstRow div .processImages, .companiesSecondRow div .processImages {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+  .process .processHeader {
+    font-size: 1.3em;
+  }
+  .empty {
+    display:none;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .process .processHeader {
+    font-size: 1.3em;
+  }
+  .empty {
+    display:none;
+  }
+  .companiesFirstRow div .processImages, .companiesSecondRow div .processImages {
+    width: 190px;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .process .processHeader {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .process .processHeader {
+    font-size: 2em;
+  }
+}
+
+/* Our Process */
+
+/* Contact */
+
+/* Contact - Parallax */
+
+#contactImgDiv {
+  background: url('../images/ContactUs.jpg');
+  height: 350px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#contactImgSection {
+  display: none;
+}
+
+.contactTitle {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  margin-top: -50px;
+}
+
+.contactTitle a, .contactTitle a:hover {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+@media screen and (min-width: 421px) and (max-width: 575px) {
+  .contactTitle a {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .contactTitle a {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .contactTitle {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    margin-top: -50px;
+  }
+  .contactTitle a {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #contactImgDiv {
+    background: url('../images/ContactUsRes.jpg');
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .contactTitle a, .contactTitle a:hover {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  /* #contactImgDiv {
+    display: none;
+  }
+
+  #contactImgSection {
+    width: 100%;
+    height: auto;
+    display: inherit;
+    position: relative;
+  }
+
+  .contactImgTitle {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    right: 30%;
+    margin-top: -50px;
+  }
+
+  .contactImgTitle a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff !important;
+  } 
+
+  .contactImage {
+    width: 100%;
+    height: auto;
+    display: inherit;
+  } */
+}
+
+/* Contact - Parallax */
+
+.contactDiv {
+  background-color: #101010;
+  color: #ffffff;
+}
+
+.contactFull {
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+
+.contactContents, .mapText {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.faIcons {
+  margin-right: 10px;
+}
+
+.location {
+  padding-left: 15px;
+}
+
+.contactHeader {
+  font-size: 1.5em;
+}
+
+.contactDetails, .contactDetails:active, .contactDetails:hover {
+  text-decoration: underline;
+  color: rgb(142, 217, 255);
+}
+
+.footer {
+  font-size: 10px;
+  position: absolute;
+  bottom: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contactHeader {
+    font-size: 1.2em;
+  }
+  .contactText, .contactContents, .mapText {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .contactHeader {
+    font-size: 1.4em;
+  }
+  .contactText, .contactContents, .mapText {
+    font-size: 1em;
+  }
+}
+
+/* Contact */
+
+/* General styling for all Products & services and their subtypes */
+
+.card {
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0px 0px 12px 2px rgba(199,199,199,1);
+  -moz-box-shadow: 0px 0px 12px 2px rgba(199,199,199,1);
+  box-shadow: 0px 0px 12px 2px rgba(199,199,199,1);
+  position: relative;
+}
+
+.ovl {
+  opacity: 0;
+  color: #fff;
+  font-size: 1em;
+  transition: 1s;
+}
+
+.ovl:hover {
+  opacity: 1;
+  background: rgb(0,0,0,0.8);
+}
+
+.link {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2.5px solid #fff;
+  padding: 0.8em;
+  border-radius: 10px;
+}
+
+.productsAndServices h5, .subTypes h5 {
+  padding-top: 1em;
+  font-weight: bold;
+}
+
+.productsAndServices .ovl a {
+  color: #ffffff !important;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.subTypes .more-info .btn-info:hover, .subTypes .card-block .btn-info:hover {
+  cursor: pointer;
+}
+
+.subTypes .card-block .btn-info, .subTypes .card-block .btn-info:link, .subTypes .card-block .btn-info:visited,
+.subTypes .more-info .btn-info, .subTypes .more-info .btn-info:link, .subTypes .more-info .btn-info:visited {
+  background-color: #279AD2;
+  color: #ffffff !important;
+  font-size: 0.85em;
+  padding: 0.6em 0.7em;
+  border: 2.5px solid #279AD2;
+}
+
+.subTypes .card-block .btn-info:hover, .subTypes .card-block .btn-info:active, .subTypes .card-block .btn-info.active,
+.subTypes .more-info .btn-info:hover, .subTypes .more-info .btn-info:active, .subTypes .more-info .btn-info.active  {
+  background-color: #ffffff;
+  color: #279AD2 !important;
+  border: 2.5px solid #279AD2;
+  font-weight: bold;
+}
+
+.subTypes .multi-buttons {
+  text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  .productsAndServices .ovl a {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 575px) {
+  .productsAndServices .ovl a {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .productsAndServices .ovl a {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .productsAndServices .ovl a {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .productsAndServices .ovl a {
+    font-size: 1em;
+  }
+}
+
+/* General styling for Products & services and their subtypes */
+
+/* Computer Products */
+
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 991px) {
+  .hidden {
+    display: none;
+  }
+}
+
+/* Computer Products */
+
+/* Product Brands */
+
+.subTypes h5 {
+  font-weight: bold;
+}
+
+/* Product Brands */
+
