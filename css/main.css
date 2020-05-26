@@ -95,7 +95,7 @@ body {
   }
   .navbar-collapse {
     height: auto;
-    max-height: 170px;
+    max-height: 200px;
     overflow-x: hidden;
   }
 }
@@ -853,20 +853,20 @@ body {
   margin-top: -50px;
 }
 
-.contactTitle a, .contactTitle a:hover {
+.contactTitle p, .contactTitle p:hover {
   color: #ffffff !important;
   font-weight: bold;
   font-size: 3em;
 }
 
 @media screen and (min-width: 421px) and (max-width: 575px) {
-  .contactTitle a {
+  .contactTitle p {
     font-size: 1.6em;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  .contactTitle a {
+  .contactTitle p {
     font-size: 1.6em;
   }
 }
@@ -878,12 +878,12 @@ body {
     right: 20%;
     margin-top: -50px;
   }
-  .contactTitle a {
+  .contactTitle p {
     font-size: 1.6em;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 490px) {
   #contactImgDiv {
     background: url('../images/ContactUsRes.jpg');
     height: 350px;
@@ -893,7 +893,7 @@ body {
     background-size: cover;
     position: relative;
   }
-  .contactTitle a, .contactTitle a:hover {
+  .contactTitle p, .contactTitle p:hover {
     color: #ffffff !important;
     font-weight: bold;
     font-size: 2em;
