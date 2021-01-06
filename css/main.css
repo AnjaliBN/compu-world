@@ -1031,11 +1031,11 @@ body {
 .productsAndServices .ovl a {
   color: #ffffff !important;
   font-size: 1.2em;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .subTypes .more-info .btn-info:hover, .subTypes .card-block .btn-info:hover {
-  cursor: pointer;
+  cursor: default;
 }
 
 .subTypes .card-block .btn-info, .subTypes .card-block .btn-info:link, .subTypes .card-block .btn-info:visited,
@@ -1057,6 +1057,10 @@ body {
 
 .subTypes .multi-buttons {
   text-align: center;
+}
+
+.subTypes .more-info .more-btn:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 320px) {
@@ -1094,7 +1098,7 @@ body {
 /* Computer Products */
 
 .hidden {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 @media screen and (max-width: 991px) {
